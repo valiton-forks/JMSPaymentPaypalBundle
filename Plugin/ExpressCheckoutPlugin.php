@@ -218,6 +218,7 @@ class ExpressCheckoutPlugin extends AbstractPlugin
                     // Throw every pending exception other authorization
                     throw $ex;
                 }
+                break;
 
             default:
                 $ex = new FinancialException('PaymentStatus is not completed: '.$response->body->get('PAYMENTINFO_0_PAYMENTSTATUS'));
